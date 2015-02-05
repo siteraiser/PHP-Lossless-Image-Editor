@@ -154,7 +154,7 @@ $response = json_encode($obj);
 
  else if(@$_POST['save'] == '0' && (isset($_POST['resizeWidth']) || isset($_POST['rotate']) && (@$_POST['submit'] == 'Preview' || @$_POST['submit'] == 'Back' || @$_POST['rotate'] == '90' || @$_POST['rotate'] == '-90')) ) {
 //echo $_POST['save'];
- //if crop is larger than image, get left and top margins, and add to virt ratios..
+ //if crop is larger than image, get left and top margins, and add to virt ratios...future consideration :)
 
 	if($_SESSION['simple-image'][$original]){  
 	
