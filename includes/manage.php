@@ -126,21 +126,21 @@ function updateDB(){
 
 		
 	//is there an image already?
-		if(isset($_GET['review_id'])){//if dealerid == session dealer id continue
-			re_db_prepare("select image,dealer_id from post_reviews WHERE id = ?");
+		if(isset($_GET['review_id'])){
+			re_db_prepare(" WHERE id = ?");
 			$res=re_db_execute(array($_GET['review_id']));
 			$row=re_db_fetch_array($res);
 			//var_dump($row);
 					
-			//$row=array('dealer_id'=>1008,'image'=>'anOrig.jpg');		
+			
 
 			$this->isUpload=@$_SESSION['simple-image']['isUpload'];
 
-			$_SESSION['rev_id']=$_GET['review_id'];
+			$_SESSION['rev_id']=$_GET['id'];
 			
-			if($_SESSION['deardirtusrid']==$row['dealer_id']){
+			if($_SESSION['deardirtusrid']==$row['id']){
 			
-			$this->editDir = $row['dealer_id'];
+			$this->editDir = $row['id'];
 			$this->editOrig="{$this->tempFolder}/{$this->editDir}/orig{$this->uniqueID}.{$this->ext}";
 			$this->editPrev="{$this->tempFolder}/{$this->editDir}/prev{$this->uniqueID}.{$this->ext}";	
 			
