@@ -5,7 +5,7 @@ class manage {
 	var $origLink=''; 	
 	var $thumbLink ; 
 	var $origName; 	
-	var $thumbPrefix='th_'; 	
+	//var $thumbPrefix='th_'; 	
 	var $uploadName='';
 	var $getImage='';
 	
