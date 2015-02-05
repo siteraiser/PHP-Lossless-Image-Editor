@@ -1,7 +1,7 @@
 <?php   /* Author: Carl Turechek*/
 class manage {   
-	var $destDir='banners/';//DIR_FS_BANNERS_IMG
-	var $editDir;//dealer id
+	var $destDir='banners/';
+	var $editDir;
 	var $origLink=''; 	
 	var $thumbLink ; 
 	var $origName; 	
