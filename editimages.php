@@ -321,7 +321,7 @@ $response = json_encode($obj);
 <script>
 
 
-var whenReady = (function(){ 
+var whenReady = (function(){ //credit to O'reilly's JavaScript definitive guide for the ajax example used
 
 	var funcs = [];
 
