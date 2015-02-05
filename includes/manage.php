@@ -126,9 +126,9 @@ function updateDB(){
 
 		
 	//is there an image already?
-		if(isset($_GET['review_id'])){
+		if(isset($_GET['_id'])){
 			re_db_prepare(" WHERE id = ?");
-			$res=re_db_execute(array($_GET['review_id']));
+			$res=re_db_execute(array($_GET['_id']));
 			$row=re_db_fetch_array($res);
 			//var_dump($row);
 					
@@ -138,7 +138,7 @@ function updateDB(){
 
 			$_SESSION['rev_id']=$_GET['id'];
 			
-			if($_SESSION['deardirtusrid']==$row['id']){
+			if($_SESSION['usrid']==$row['id']){
 			
 			$this->editDir = $row['id'];
 			$this->editOrig="{$this->tempFolder}/{$this->editDir}/orig{$this->uniqueID}.{$this->ext}";
