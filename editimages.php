@@ -845,7 +845,7 @@ foreach(glob('banners/'.'*') as $filename){
 
 			<input type="submit" name="submit" value="Upload" >   
 
-		</form>  <div id="fileselect" type="file" class="fileDropTarget" data-uploadto="/editimages/editimages.php">Drop image</div> 
+		</form>  <div id="fileselect" type="file" class="fileDropTarget" data-uploadto="<?php echo $_SERVER["SCRIPT_NAME"];?>">Drop image</div> 
 
 	</div>
 
